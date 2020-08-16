@@ -6,7 +6,7 @@ export default function NotFound() {
     return (
         <div className="NotFound">
             <h3>A pagina nao foi encontrada</h3>
-            <img src={MinionsWorking} className="MinionsWorking" />
+            <img src={MinionsWorking} alt= "Minions Not Found" className="MinionsWorking" />
         </div>
     );
 }

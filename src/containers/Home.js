@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { PageHeader, ListGroup, ListGroupItem } from "react-bootstrap";
+import { useAppContext } from "../libs/contextLib";
+import { onError } from "../libs/errorLib";
 import "./Home.css";
+import { API } from "aws-amplify";
+import ProductList from "../components/ProductList";
+import { Auth } from "aws-amplify";
+
 
 export default function Home() {
+
     return (
+
         <div className="Home">
-            <div className="lander">
-                <h1>Minion's World</h1>
-                <p>A Minions Store</p>
-            </div>
+            <ProductList/>
         </div>
     );
 }

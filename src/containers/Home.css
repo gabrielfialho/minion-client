@@ -11,3 +11,10 @@
     .Home .lander p {
         color: #999;
     }
+
+    .product-image {
+      max-width: 30rem;
+      max-height: 30rem; 
+    }
+
+

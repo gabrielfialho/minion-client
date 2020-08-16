@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Amplify } from 'aws-amplify';
 import config from './config';
+import 'semantic-ui-css/semantic.min.css'
+import {ProductProvider} from './context.js'
 
 Amplify.configure({
     Auth: {
@@ -23,7 +25,7 @@ Amplify.configure({
     API: {
         endpoints: [
             {
-                name: "minions",
+                name: "encomendas",
                 endpoint: config.apiGateway.URL,
                 region: config.apiGateway.REGION
             },
@@ -32,9 +34,11 @@ Amplify.configure({
 });
 
 ReactDOM.render(
+    <ProductProvider>
     <Router>
         <App />
-    </Router>,
+        </Router>
+    </ProductProvider>,
     document.getElementById('root')
 );
 
